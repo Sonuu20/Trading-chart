@@ -1,16 +1,103 @@
-# React + Vite
+# 📊 Charting Application (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance charting frontend built using **React + Vite**, designed for real-time financial data visualization.
 
-Currently, two official plugins are available:
+This project uses **Binance APIs (REST + WebSocket)** to fetch and stream live market data, enabling dynamic and interactive chart updates.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚛️ React
+- ⚡ Vite
+- 📉 lightweight-charts (by TradingView)
+- 🌐 Binance REST API
+- 🔌 Binance WebSocket Streams
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📡 Data Sources
+
+### 1. Binance REST API
+Used for:
+- Fetching historical candle (OHLC) data
+- Initial chart rendering
+
+### 2. Binance WebSocket API
+Used for:
+- Real-time price updates
+- Live candlestick updates
+- Streaming market data without polling
+
+---
+
+## ✨ Features
+
+- 📊 Candlestick chart rendering
+- 🔄 Real-time updates via WebSocket
+- 🎯 Crosshair tooltip support
+- ⚡ Fast performance using lightweight-charts
+- 🔁 Seamless switching between historical + live data
+
+---
+
+## 📁 Project Structure
+
+
+src/
+│
+├── components/
+│ ├── ChartContainer.jsx
+│ ├── crosshairTooltip.js
+│
+├── api/
+│ ├── apiRoutes.js
+│ ├── chartService.js
+│
+├── hooks/
+│ ├── useChartData.js
+│
+└── utils/
+├── formatters.js
+
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone <your-repo-url>
+cd <project-folder>
+2. Install dependencies
+npm install
+3. Run development server
+npm run dev
+🔌 WebSocket Example (Binance)
+
+Example stream used:
+
+wss://stream.binance.com:9443/ws/btcusdt@kline_1m
+📈 Future Improvements
+🧠 Indicators (EMA, RSI, MACD)
+📊 Multiple timeframes
+💾 Save chart layouts
+🧩 Drawing tools (trendlines, fib, etc.)
+🧭 Trading panel integration
+🧪 ESLint Configuration
+
+For production apps, consider:
+
+Using TypeScript
+Enabling type-aware lint rules via typescript-eslint
+📌 Notes
+This project does not use TradingView's licensed charting library.
+Instead, it uses lightweight-charts, which is free and performant.
+🤝 Contribution
+
+Feel free to fork and improve the project.
+
+📜 License
+
+MIT License
