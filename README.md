@@ -41,25 +41,33 @@ Used for:
 
 ---
 
+Sahi pakde bhai — formatting thoda toot gaya tha 😄
+Main ise **proper GitHub README markdown format** me clean karke de raha hoon 👇 (copy-paste ready)
+
+---
+
+```md
 ## 📁 Project Structure
 
+```
 
 src/
 │
 ├── components/
-│ ├── ChartContainer.jsx
-│ ├── crosshairTooltip.js
+│   ├── ChartContainer.jsx
+│   ├── crosshairTooltip.js
 │
 ├── api/
-│ ├── apiRoutes.js
-│ ├── chartService.js
+│   ├── apiRoutes.js
+│   ├── chartService.js
 │
 ├── hooks/
-│ ├── useChartData.js
+│   ├── useChartData.js
 │
 └── utils/
 ├── formatters.js
 
+````
 
 ---
 
@@ -70,34 +78,66 @@ src/
 ```bash
 git clone <your-repo-url>
 cd <project-folder>
-2. Install dependencies
+````
+
+### 2. Install dependencies
+
+```bash
 npm install
-3. Run development server
+```
+
+### 3. Run development server
+
+```bash
 npm run dev
-🔌 WebSocket Example (Binance)
+```
+
+---
+
+## 🔌 WebSocket Example (Binance)
 
 Example stream used:
 
+```bash
 wss://stream.binance.com:9443/ws/btcusdt@kline_1m
-📈 Future Improvements
-🧠 Indicators (EMA, RSI, MACD)
-📊 Multiple timeframes
-💾 Save chart layouts
-🧩 Drawing tools (trendlines, fib, etc.)
-🧭 Trading panel integration
-🧪 ESLint Configuration
+```
+
+---
+
+## 📈 Future Improvements
+
+* 🧠 Indicators (EMA, RSI, MACD)
+* 📊 Multiple timeframes
+* 💾 Save chart layouts
+* 🧩 Drawing tools (trendlines, fib, etc.)
+* 🧭 Trading panel integration
+
+---
+
+## 🧪 ESLint Configuration
 
 For production apps, consider:
 
-Using TypeScript
-Enabling type-aware lint rules via typescript-eslint
-📌 Notes
-This project does not use TradingView's licensed charting library.
-Instead, it uses lightweight-charts, which is free and performant.
-🤝 Contribution
+* Using TypeScript
+* Enabling type-aware lint rules via `typescript-eslint`
+
+---
+
+## 📌 Notes
+
+* This project does **not** use TradingView's licensed charting library
+* Instead, it uses **lightweight-charts**, which is free and performant
+
+---
+
+## 🤝 Contribution
 
 Feel free to fork and improve the project.
 
-📜 License
+---
+
+## 📜 License
 
 MIT License
+
+````
