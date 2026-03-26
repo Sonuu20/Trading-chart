@@ -138,6 +138,5 @@ Feel free to fork and improve the project.
 
 ## 📜 License
 
-MIT License
+* MIT License
 
-````
